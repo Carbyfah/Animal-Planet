@@ -1,0 +1,93 @@
+/* Estilos generales */
+.navbar {
+  background: linear-gradient(to right, #2c6e49, #2f5233);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar .logo img {
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 100%;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #c8e6c9;
+}
+
+/* Estilo del dropdown */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  min-width: 150px; /* Ajusta el ancho mínimo */
+}
+
+.dropdown-menu li {
+  padding: 8px 20px;
+}
+
+.dropdown-menu a {
+  color: #2c6e49;
+  display: block; /* Hace que el área clickeable sea más grande */
+  padding: 8px 15px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #c8e6c9;
+}
+
+/* Solución al problema de desaparición rápida */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+      display: block;
+      text-align: center;
+  }
+
+  .dropdown-menu {
+      position: static;
+      box-shadow: none;
+  }
+}
