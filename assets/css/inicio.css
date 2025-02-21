@@ -1,101 +1,305 @@
+/* ----- ESTILOS GENERALES ----- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef7e1;
+    color: #333;
+    display: grid;
+    flex-direction: column;
+    min-height: 100vh; /* Mínimo toda la altura de la pantalla */
+    grid-template-rows: auto 1fr auto;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eef7e1;
+}
+
+/* Contenedor general para centrar contenido */
 .container {
+    width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+}
+
+/* ----- SECCIÓN HERO ----- */
+.hero {
+    background: url('../../assets/images/fondo-selva.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2c6e49;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #1c4a2c;
+}
+
+/* ----- SECCIÓN CATEGORÍAS DE ANIMALES ----- */
+.animal-categories {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    position: relative;
+    width: 200px;
+    text-align: center;
+}
+
+.category-item img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+.category-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c6e49;
+}
+
+/* ----- SECCIÓN NOTICIAS ----- */
+.news, .noticias {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.news-item {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-item h3 {
+    padding: 15px;
+    font-size: 20px;
+    color: #1c4a2c;
+}
+
+.news-item p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+}
+
+/* ----- SECCIÓN ANIMALES EN PELIGRO ----- */
+.peligro-extincion {
+    padding: 50px 20px;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.animales-lista {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.animal-item {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     padding: 20px;
 }
 
-/* Estilos para breadcrumbs */
-.breadcrumb {
-    font-size: 14px;
-    color: #777;
+.animal-item img {
+    width: 100%;
+    border-radius: 10px;
 }
 
-.breadcrumb a {
-    color: #f4a261;
+/* ----- SECCIÓN DOCUMENTALES ----- */
+.documentales {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.documental {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.documental iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* ----- SECCIÓN GALERÍA ----- */
+.galeria {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f8f8;
+}
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.imagenes img {
+    width: 200px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.imagenes img:hover {
+    transform: scale(1.1);
+}
+
+/* ----- SECCIÓN ZONA PARA NIÑOS ----- */
+.zona-ninos {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+}
+
+.zona-ninos p {
+    font-size: 18px;
+}
+
+/* ----- SECCIÓN VOLUNTARIADO ----- */
+.voluntariado {
+    padding: 50px 20px;
+    background: #e6f5d0;
+    text-align: center;
+}
+
+/* ----- SECCIÓN MAPA DE VIDA SILVESTRE ----- */
+.mapa {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+}
+
+.mapa iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+/* ----- SECCIÓN TIENDA ----- */
+.tienda {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    background: #2c6e49;
+    color: white;
+    text-align: center;
+    padding: 30px 10px;
+    width: 100%;
+    position: relative; /* Se mantiene como parte normal del flujo */
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Esto hace que solo aparezca hasta el final */
+}
+
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer-section {
+    width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: #c8e6c9;
     text-decoration: none;
 }
 
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-/* Filtros */
-.filtros {
-    margin: 20px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.filtros input {
-    display: none;
-}
-
-.filtros label {
-    background: #f4a261;
+.footer-section a:hover {
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.filtros input:checked + label {
-    background: #e76f51;
-}
-
-/* Grid de productos */
-.grid-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.footer-copy {
     margin-top: 20px;
-}
-
-.producto {
-    background: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.producto img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.producto h2 {
-    font-size: 18px;
-    margin: 10px 0;
-}
-
-.producto p {
-    color: #e76f51;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.producto button {
-    background: #f4a261;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.producto button:hover {
-    background: #e76f51;
-}
-
-/* Mostrar solo productos según filtro */
-#mamiferos:checked ~ .grid-productos .producto:not(.mamiferos),
-#aves:checked ~ .grid-productos .producto:not(.aves) {
-    display: none;
+    font-size: 14px;
+    opacity: 0.8;
 }

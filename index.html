@@ -3,37 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Página de Inicio</title>
-    <link rel="stylesheet" href="css/estilos.css"> <!-- Enlace a tu CSS -->
+    <title>Animal Planet - Inicio</title>
+    <link rel="stylesheet" href="./assets/css/navbar.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/inicio.css">
 </head>
 <body>
-
-    <!-- Menú de Navegación -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="servicios.html">Servicios</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-
-    <!-- Sección Principal -->
     <header>
-        <h1>Bienvenido a Mi Página</h1>
-        <p>Un sitio diseñado solo con HTML y CSS.</p>
+        <nav class="navbar">
+            <a href="../inicio/inicio.html" class="logo">
+                <img src="../../assets/images/iconos-principales/logo.png" alt="Animal Planet Logo">
+                <span>Animal Planet</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./html/historia/historia.html">Historia</a></li>
+                <li class="dropdown">
+                    <a href="./html/animales/inicio/inicio-animales.html">Animales</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./html/animales/anfibios/anfibios.html">Anfibios</a></li>
+                        <li><a href="./html/animales/aves/aves.html">Aves</a></li>
+                        <li><a href="./html/animales/mamiferos/mamiferos.html">Mamíferos</a></li>
+                        <li><a href="./html/animales/peces/peces.html">Peces</a></li>
+                        <li><a href="./html/animales/reptiles/reptiles.html">Reptiles</a></li>
+                    </ul>
+                </li>
+                <li><a href="./html/conocenos/conocenos.html">Conócenos</a></li>
+                <li><a href="./html/galeria/imagenes.html">Galería</a></li>
+                <li><a href="./html/login/login.html">Login</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <main class="main-content">
+        <section class="inicio">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Explora el Maravilloso Mundo Animal</h1>
+                    <p>Descubre especies fascinantes, historias de rescate y aprende cómo proteger la naturaleza.</p>
+                    <a href="./html/conocenos/conocenos.html" class="btn">Descubre Más</a>
+                </div>
+            </section>
+            
+            <section class="animal-categories">
+                <h2>Explora el Reino Animal</h2>
+                <div class="gallery">
+                    <div class="category-item">
+                        <a href="./html/animales/anfibios/anfibios.html">
+                            <img src="./assets/images/animales/anfibios/1-rana.png" alt="Anfibios">
+                            <span>Anfibios</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="../animales/aves/aves.html">
+                            <img src="./assets/images/animales/aves/1-ave.png" alt="Aves">
+                            <span>Aves</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="./html/animales/mamiferos/mamiferos.html">
+                            <img src="./assets/images/animales/mamiferos/1-mamifero.png" alt="Mamíferos">
+                            <span>Mamíferos</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="./html/animales/peces/peces.html">
+                            <img src="./html/assets/images/animales/peces/1-pez.png" alt="Peces">
+                            <span>Peces</span>
+                        </a>
+                    </div>
+                    <div class="category-item">
+                        <a href="./html/animales/reptiles/reptiles.html">
+                            <img src="./assets/images/animales/reptiles/1-reptil.png" alt="Reptiles">
+                            <span>Reptiles</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- HASTA AQUI CORREGI -->
 
-    <!-- Contenido Principal -->
-    <section>
-        <h2>Nuestros Servicios</h2>
-        <p>Ofrecemos diseño web, desarrollo y más.</p>
-    </section>
+            <section class="news">
+                <h2>Últimas Noticias</h2>
+                <div class="news-container">
+                    <article class="news-item">
+                        <img src="../../assets/images/noticias/rescate-tigre.jpg" alt="Rescate de Tigre">
+                        <h3>Rescate de un Tigre en Peligro</h3>
+                        <p>Un equipo de conservación logró rescatar un tigre herido en la selva de Sumatra.</p>
+                    </article>
+                    <article class="news-item">
+                        <img src="../../assets/images/noticias/nueva-especie.jpg" alt="Nueva Especie Descubierta">
+                        <h3>Descubren Nueva Especie de Anfibio</h3>
+                        <p>Científicos descubren una nueva especie de rana fluorescente en la Amazonía.</p>
+                    </article>
+                </div>
+            </section>
+        
+            <section class="noticias">
+                <h2>📰 Últimas Noticias sobre la Fauna</h2>
+                <div class="noticia">
+                    <img src="../../assets/images/noticias/noticia1.jpg" alt="Noticia 1">
+                    <div class="noticia-content">
+                        <h3>Nuevo Refugio de Animales en África</h3>
+                        <p>Un nuevo santuario abre sus puertas para rescatar animales en peligro.</p>
+                        <a href="#">Leer más</a>
+                    </div>
+                </div>
+                <div class="noticia">
+                    <img src="../../assets/images/noticias/noticia2.jpg" alt="Noticia 2">
+                    <div class="noticia-content">
+                        <h3>Descubren una Nueva Especie de Rana</h3>
+                        <p>Científicos han identificado una especie de rana fluorescente en la Amazonía.</p>
+                        <a href="#">Leer más</a>
+                    </div>
+                </div>
+            </section>
+        
+            
+            <section class="peligro-extincion">
+                <h2>⚠️ Animales en Peligro de Extinción</h2>
+                <div class="animales-lista">
+                    <div class="animal-item">
+                        <img src="../../assets/images/extincion/tigre.jpg" alt="Tigre de Bengala">
+                        <h3>Tigre de Bengala</h3>
+                        <p>Solo quedan menos de 3,900 ejemplares en la naturaleza.</p>
+                    </div>
+                    <div class="animal-item">
+                        <img src="../../assets/images/extincion/rinoceronte.jpg" alt="Rinoceronte Blanco">
+                        <h3>Rinoceronte Blanco</h3>
+                        <p>Se encuentra en grave peligro de extinción debido a la caza furtiva.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <section class="documentales">
+                <h2>🎬 Documentales Destacados</h2>
+                <div class="documental">
+                    <iframe src="https://www.youtube.com/embed/xyz123" allowfullscreen></iframe>
+                    <h3>El Mundo Salvaje</h3>
+                    <p>Explora la vida de los animales salvajes en su hábitat natural.</p>
+                </div>
+                <div class="documental">
+                    <iframe src="https://www.youtube.com/embed/abc456" allowfullscreen></iframe>
+                    <h3>Maravillas del Océano</h3>
+                    <p>Sumérgete en las profundidades y descubre especies fascinantes.</p>
+                </div>
+            </section>
+        
+            <section class="programas">
+                <h2>📺 Explora Nuestros Programas</h2>
+                <div class="programa-item">
+                    <img src="../../assets/images/programas/wild.jpg" alt="Wild">
+                    <h3>Wild Animals</h3>
+                    <p>Acompaña a expertos en un recorrido por los lugares más salvajes del planeta.</p>
+                </div>
+                <div class="programa-item">
+                    <img src="../../assets/images/programas/ocean.jpg" alt="Ocean Secrets">
+                    <h3>Secretos del Océano</h3>
+                    <p>Descubre los secretos de las criaturas marinas.</p>
+                </div>
+            </section>
+        
+            
+            <section class="historias-conservacion">
+                <h2>🌍 Historias Inspiradoras de Conservación</h2>
+                <p>Conoce a héroes que trabajan por la protección de la fauna.</p>
+                <ul>
+                    <li><a href="#">Cómo una comunidad salvó a las tortugas marinas</a></li>
+                    <li><a href="#">El increíble rescate de un elefante atrapado</a></li>
+                </ul>
+            </section>
+        
+            
+            <section class="galeria">
+                <h2>📸 Galería de Imágenes y Videos</h2>
+                <div class="imagenes">
+                    <img src="../../assets/images/galeria/leon.jpg" alt="León">
+                    <img src="../../assets/images/galeria/delfin.jpg" alt="Delfín">
+                    <img src="../../assets/images/galeria/aguila.jpg" alt="Águila">
+                </div>
+            </section>
+        
+            <section class="zona-ninos">
+                <h2>🎮 Zona de Niños: Aprender Jugando</h2>
+                <p>Divertidos juegos y actividades educativas sobre los animales.</p>
+                <a href="#" class="btn">Explorar Juegos</a>
+            </section>
+        
+            <section class="tienda">
+                <h2>🛍️ Tienda Oficial de Animal Planet</h2>
+                <p>Compra productos exclusivos y apoya la conservación de la fauna.</p>
+                <a href="#" class="btn">Visitar Tienda</a>
+            </section>
+        
+            <section class="voluntariado">
+                <h2>🤝 Voluntariado y Cómo Ayudar</h2>
+                <p>¿Quieres contribuir? Conviértete en voluntario y ayuda a salvar animales.</p>
+                <a href="#" class="btn">Más Información</a>
+            </section>
+        
+            <section class="mapa">
+                <h2>🗺️ Mapa de Vida Silvestre</h2>
+                <p>Explora hábitats naturales y conoce dónde viven diferentes especies.</p>
+                <iframe src="https://www.google.com/maps/d/embed?mid=xyz123"></iframe>
+            </section>
+        </section>
+    </main>
 
-    <!-- Pie de Página -->
-    <footer>
-        <p>&copy; 2025 Mi Página Web. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Sobre Nosotros</h3>
+                <p>Exploramos la belleza del reino animal y fomentamos el respeto por la naturaleza.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="../animales/">Animales</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <p>Email: <a href="mailto:info@animalplanet.com">info@animalplanet.com</a></p>
+                <p>Teléfono: <a href="tel:+50412345678">+504 9773-4613</a></p>
+            </div>
+        </div>
+        <p class="footer-copy">© 2025 Animal Planet - Todos los derechos reservados.</p>
     </footer>
-
 </body>
 </html>

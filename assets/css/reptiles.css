@@ -90,13 +90,13 @@ body {
 }
 
 /* Personalización para cada tipo de anfibio */
-/* .animal.rana ul li::before {
-    content: "🐸";
+.animal.serpiente ul li::before {
+    content: "🐍";
 }
 
-.animal.salamandra ul li::before {
-    content: "🦎";
-} */
+.animal.cocodrilo ul li::before {
+    content: "🐍";
+}
 
 /* Botón de regreso */
 .back {
@@ -184,16 +184,13 @@ body {
 }
 
 /* Muestra solo la imagen y la información del animal seleccionado */
-#rana:target, #salamandra:target {
+#serpiente:target, #cocodrilo:target {
     display: block;
 }
 
 /* También mostrar la información correspondiente */
-#rana:target + #rana-info, 
-#salamandra:target + #salamandra-info,
-#camaleon:target + #camaleon-info, 
-#sapocaña:target + #sapocaña-info,
-#triton:target + #triton-info{
+#serpiente:target + #serpiente-info, 
+#cocodrilo:target + #cocodrilo-info {
     display: block;
 }
 

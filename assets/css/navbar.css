@@ -1,11 +1,18 @@
-/* Estilos generales */
+/* Estilos generales del navbar */
 .navbar {
   background: linear-gradient(to right, #2c6e49, #2f5233);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
+  width: 100%; /* Ocupar todo el ancho */
+  height: 70px; /* Altura fija */
+  padding: 0 5%; /* Espaciado interno a los lados */
+  box-sizing: border-box; /* Evita que el padding aumente el tamaño */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: fixed; /* Mantenerlo fijo en la parte superior */
+  top: 0; /* Asegura que quede en la parte superior */
+  left: 0;
+  z-index: 1000; /* Mantenerlo sobre otros elementos */
 }
 
 .navbar .logo {
