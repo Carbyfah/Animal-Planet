@@ -89,15 +89,6 @@ body {
     justify-content: start;
 }
 
-/* Personalización para cada tipo de anfibio */
-.animal.serpiente ul li::before {
-    content: "🐍";
-}
-
-.animal.cocodrilo ul li::before {
-    content: "🐍";
-}
-
 /* Botón de regreso */
 .back {
     text-decoration: none;
@@ -117,11 +108,6 @@ body {
     background: linear-gradient(135deg, #0056b3, #003f80);
     transform: scale(1.1);
 }
-
-
-
-
-
 
 /* Oculta todas las secciones por defecto */
 .animal {

@@ -119,11 +119,6 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
-
-
 /* Oculta todas las secciones por defecto */
 .animal {
     display: none;
@@ -175,8 +170,6 @@ body {
     background: linear-gradient(135deg, #1e7e34, #155d27);
     transform: scale(1.1);
 }
-
-
 
 
 /* Oculta todos los elementos por defecto */
