@@ -105,15 +105,4 @@
     line-height: 1.8;
 }
 
-/* ----- RESPONSIVE ----- */
-@media (max-width: 768px) {
-    .mision-vision {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mision, .vision {
-        width: 90%;
-    }
-}
 

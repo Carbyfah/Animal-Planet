@@ -1,148 +1,141 @@
-/* Estilos generales aplicables a todos los anfibios */
+/* ----- Estilos generales aplicables a todos los animales ----- */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #eef7e1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 0;
+    font-family: 'Poppins', sans-serif; /* Fuente estilizada */
+    background-color: #eef7e1; /* Fondo verde claro */
+    display: flex; /* Usa flexbox para organizar los elementos */
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    padding: 20px; /* Espaciado interno */
+    margin: 0; /* Elimina el margen predeterminado */
 }
 
-/* Contenedor principal */
+/* ----- Contenedor principal ----- */
 .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-    max-width: 1200px;
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centra los elementos */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 1200px; /* Ancho máximo */
 }
 
-/* Imagen principal */
+/* ----- Imagen principal ----- */
 .main-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 }
 
 .main-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Ajuste al ancho disponible */
+    max-width: 500px; /* Tamaño máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out; /* Transición suave */
 }
 
+/* ----- Efecto de zoom al pasar el mouse ----- */
 .main-image img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta el tamaño ligeramente */
 }
 
-/* Contenedor de información */
+/* ----- Contenedor de información del animal ----- */
 .animal {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    width: 90%;
-    max-width: 800px;
-    margin-top: 20px;
+    background: #ffffff; /* Fondo blanco */
+    padding: 25px; /* Espaciado interno */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    text-align: center; /* Centra el texto */
+    width: 90%; /* Ajusta el ancho */
+    max-width: 800px; /* Ancho máximo */
+    margin-top: 20px; /* Espaciado superior */
 }
 
+/* ----- Estilo de los títulos ----- */
 .animal h2 {
-    font-size: 28px;
-    color: #2d572c;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 28px; /* Tamaño de fuente */
+    color: #2d572c; /* Color verde oscuro */
+    margin-bottom: 10px; /* Espaciado inferior */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 .animal h3 {
-    font-size: 22px;
-    color: #1c3f1a;
-    margin-top: 15px;
-    font-weight: bold;
+    font-size: 22px; /* Tamaño del subtítulo */
+    color: #1c3f1a; /* Verde más oscuro */
+    margin-top: 15px; /* Espaciado superior */
+    font-weight: bold; /* Negrita */
 }
 
+/* ----- Estilos para párrafos y listas ----- */
 .animal p, .animal ul {
-    font-size: 18px;
-    color: #333;
-    line-height: 1.8;
-    text-align: justify;
+    font-size: 18px; /* Tamaño de fuente */
+    color: #333; /* Texto gris oscuro */
+    line-height: 1.8; /* Espaciado entre líneas */
+    text-align: justify; /* Justifica el texto */
 }
 
 .animal ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0; /* Elimina el padding */
 }
 
+/* ----- Estilo de los elementos de la lista ----- */
 .animal ul li {
-    background: #d9f2d2;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    background: #d9f2d2; /* Fondo verde claro */
+    padding: 12px; /* Espaciado interno */
+    margin: 8px 0; /* Espaciado vertical */
+    border-radius: 8px; /* Bordes redondeados */
+    font-weight: 500; /* Fuente seminegrita */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: start; /* Alinea a la izquierda */
 }
 
-/* Personalización para cada tipo de anfibio */
-.animal.guacamaya ul li::before {
-    content: "🐸";
-}
 
-.animal.picozapato ul li::before {
-    content: "🦎";
-}
-
-/* Botón de regreso */
+/* ----- Botón de regreso ----- */
 .back {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    background: linear-gradient(135deg, #007BFF, #0056b3);
-    padding: 12px 25px;
-    border-radius: 30px;
-    display: inline-block;
-    transition: background 0.3s ease-in-out, transform 0.2s;
-    font-weight: bold;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    text-decoration: none; /* Elimina subrayado */
+    font-size: 18px; /* Tamaño de fuente */
+    color: #fff; /* Texto blanco */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Degradado azul */
+    padding: 12px 25px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    display: inline-block; /* Permite aplicar padding */
+    transition: background 0.3s ease-in-out, transform 0.2s; /* Transición suave */
+    font-weight: bold; /* Negrita */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    margin-top: 20px; /* Espaciado superior */
 }
 
+/* ----- Efecto hover del botón de regreso ----- */
 .back:hover {
-    background: linear-gradient(135deg, #0056b3, #003f80);
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #0056b3, #003f80); /* Azul más oscuro */
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
-
-
-
-
-
-/* Oculta todas las secciones por defecto */
+/* ----- Oculta todas las secciones por defecto ----- */
 .animal {
     display: none;
 }
 
-/* Muestra solo la sección seleccionada con :target */
+/* ----- Muestra solo la sección seleccionada con :target ----- */
 .animal:target {
     display: block;
 }
 
-/* Asegura que la imagen principal también aparezca */
+/* ----- Oculta la imagen principal por defecto ----- */
 .main-image {
     display: none;
 }
 
+/* ----- Muestra la imagen seleccionada ----- */
 .main-image:target {
     display: block;
 }
 
-/* Contenedor para centrar */
+/* ----- Contenedor para centrar los elementos ----- */
 .gallery {
     display: flex;
     flex-direction: column;
@@ -152,51 +145,44 @@ body {
     margin-top: 80px;
 }
 
-/* Botones de selección */
+/* ----- Botones de selección ----- */
 .selector {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
+    display: flex; /* Usa flexbox */
+    gap: 15px; /* Espaciado entre botones */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
+/* ----- Estilo de los botones de selección ----- */
 .selector a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #fff;
-    background: linear-gradient(135deg, #28a745, #1e7e34);
-    padding: 10px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: background 0.3s ease-in-out, transform 0.2s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 18px; /* Tamaño de fuente */
+    color: #fff; /* Texto blanco */
+    background: linear-gradient(135deg, #28a745, #1e7e34); /* Degradado verde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 30px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita */
+    transition: background 0.3s ease-in-out, transform 0.2s; /* Transición suave */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
 }
 
+/* ----- Efecto hover de los botones de selección ----- */
 .selector a:hover {
-    background: linear-gradient(135deg, #1e7e34, #155d27);
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #1e7e34, #155d27); /* Verde más oscuro */
+    transform: scale(1.1); /* Aumenta el tamaño */
 }
 
-
-
-
-/* Oculta todos los elementos por defecto */
-.main-image, .animal {
-    display: none;
-}
-
-/* Muestra solo la imagen y la información del animal seleccionado */
+/* ----- Muestra solo la imagen y la información del animal seleccionado ----- */
 #guacamaya:target, #picozapato:target {
     display: block;
 }
 
-/* También mostrar la información correspondiente */
+/* ----- También muestra la información correspondiente ----- */
 #guacamaya:target + #guacamaya-info, 
 #picozapato:target + #picozapato-info {
     display: block;
 }
 
-
-/* Estilo general del botón */
+/* ----- Estilo del botón volver ----- */
 .volver-btn {
     display: inline-block;
     text-decoration: none;
@@ -212,7 +198,7 @@ body {
     margin: 15px 0;
 }
 
-/* Efecto hover */
+/* ----- Efecto hover del botón volver ----- */
 .volver-btn:hover {
     background: linear-gradient(135deg, #0056b3, #003f80);
     transform: scale(1.1);

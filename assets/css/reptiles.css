@@ -176,9 +176,6 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
 /* Oculta todos los elementos por defecto */
 .main-image, .animal {
     display: none;

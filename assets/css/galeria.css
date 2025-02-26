@@ -1,322 +1,173 @@
 /* ----- ESTILOS GENERALES ----- */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Fuente estilizada */
     background-color: #e8f5e9; /* Fondo verde claro */
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Mantener altura completa */
+    color: #333; /* Color del texto principal */
+    display: flex; /* Usa flexbox para organizar */
+    flex-direction: column; /* Acomoda los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0; /* Elimina márgenes predeterminados */
+    padding: 0; /* Elimina relleno interno */
+    min-height: 100vh; /* Mantiene altura completa */
 }
 
-/* Contenedor Principal */
+/* ----- CONTENEDOR PRINCIPAL ----- */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%; /* Asegurar que ocupe todo el ancho */
-    padding: 0; /* Eliminar cualquier espacio interno */
-    margin: 0; /* Evitar margen extra */
-    min-height: auto; /* Solo ocupar el espacio necesario */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Acomoda en columna */
+    align-items: center; /* Centra los elementos */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding: 0; /* Elimina relleno */
+    margin: 0; /* Evita márgenes adicionales */
+    min-height: auto; /* Solo ocupa el espacio necesario */
 }
-
 
 /* ----- ESTILO DEL TÍTULO "PINGÜINOS" ----- */
 .titulo-pinguino {
-    font-size: 26px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 26px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    text-transform: uppercase; /* Convierte en mayúsculas */
     color: #2c6e49; /* Verde oscuro */
-    text-align: center;
-    margin: 30px auto 20px auto; /* Espaciado arriba y abajo */
-    width: fit-content; /* Solo el ancho del texto */
+    text-align: center; /* Centra el texto */
+    margin: 30px auto 20px auto; /* Espaciado superior e inferior */
+    width: fit-content; /* Ajusta al ancho del contenido */
 }
 
 /* ----- GALERÍA ESTILO PINTEREST ----- */
 .gallery {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 1cap; /* Pequeño margen después del navbar */
-    padding: 0 0px;
-    margin-top: 100px;
-
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Acomoda en columna */
+    align-items: center; /* Centra los elementos */
+    width: 100%; /* Ancho completo */
+    max-width: 1200px; /* Máximo ancho */
+    margin-top: 100px; /* Espaciado superior */
+    padding: 0 0px; /* Espaciado interno */
 }
 
-/* Tarjetas de imágenes */
+/* ----- TARJETAS DE IMÁGENES ----- */
 .image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    width: 300px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Acomoda en columna */
+    align-items: center; /* Centra elementos */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Posicionamiento relativo */
+    width: 300px; /* Ancho de la tarjeta */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+    transition: transform 0.3s ease-in-out; /* Suaviza la animación */
 }
 
+/* ----- IMÁGENES DENTRO DE LAS TARJETAS ----- */
 .image-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-item:hover {
-    transform: scale(1.05);
-}
-
-.image-item img:hover {
-    transform: scale(1.1);
+    width: 100%; /* Ajuste al 100% de la tarjeta */
+    height: auto; /* Mantiene la proporción */
+    display: block; /* Evita espacios en blanco debajo */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out; /* Efecto suave */
 }
 
 /* ----- BOTONES DE CATEGORÍAS ----- */
 .pinguinos-btn, .back {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 16px;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 15px;
-    text-align: center;
+    display: inline-block; /* Asegura alineación correcta */
+    text-decoration: none; /* Elimina subrayado */
+    font-size: 16px; /* Tamaño del texto */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 25px; /* Bordes redondeados */
+    font-weight: bold; /* Negrita */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave */
+    margin-top: 15px; /* Espaciado superior */
+    text-align: center; /* Centra el texto */
 }
 
-/* Botón Verde para Pingüinos */
+/* ----- BOTÓN VERDE PARA PINGÜINOS ----- */
 .pinguinos-btn {
-    background-color: #28a745;
+    background-color: #28a745; /* Verde vibrante */
 }
 
 .pinguinos-btn:hover {
-    background-color: #218838;
-    transform: scale(1.05);
+    background-color: #218838; /* Verde más oscuro */
+    transform: scale(1.05); /* Aumenta tamaño */
 }
 
-/* Botón Azul para Regreso */
+/* ----- BOTÓN AZUL PARA REGRESO ----- */
 .back {
-    background-color: #007BFF;
+    background-color: #007BFF; /* Azul vibrante */
 }
 
 .back:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Flecha antes del texto en el botón de regreso */
-.back::before {
-    content: "";
-    margin-right: 8px;
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Aumenta tamaño */
 }
 
 /* ----- SECCIÓN DE IMÁGENES RELACIONADAS ----- */
 .animal {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Permite varias líneas */
+    justify-content: center; /* Centra las imágenes */
+    gap: 20px; /* Espaciado entre elementos */
+    width: 100%; /* Ancho completo */
+    max-width: 1200px; /* Máximo ancho */
 }
 
+/* ----- IMÁGENES DENTRO DE LA SECCIÓN ----- */
 .animal img {
-    width: 30%;
-    max-width: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    cursor: pointer;
+    width: 30%; /* Distribuye el espacio */
+    max-width: 250px; /* Tamaño máximo */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s; /* Transición suave */
+    cursor: pointer; /* Cambia el cursor */
 }
 
+/* ----- EFECTO AL PASAR EL CURSOR ----- */
 .animal img:hover {
-    transform: scale(1.05);
+    transform: scale(1.05); /* Aumenta ligeramente */
 }
 
-/* Ajuste del título de cada sección */
+/* ----- AJUSTE DEL TÍTULO DE CADA SECCIÓN ----- */
 .animal h2 {
-    width: 100%;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
+    width: 100%; /* Ancho completo */
+    text-align: center; /* Centra el texto */
+    font-size: 24px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 15px; /* Espaciado inferior */
 }
 
 /* ----- ESTILOS DEL FOOTER ----- */
 .footer {
-    background: linear-gradient(to right, #2f5233, #2c6e49);
-    color: white;
-    text-align: center;
-    padding: 15px 5%;
-    width: 100%;
-    box-sizing: border-box;
-    min-height: 60px;
-    margin-top: auto; /* Mantenerlo pegado al final */
+    background: linear-gradient(to right, #2f5233, #2c6e49); /* Degradado verde */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centra el texto */
+    padding: 15px 5%; /* Espaciado interno */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Incluye padding en el ancho */
+    min-height: 60px; /* Altura mínima */
+    margin-top: auto; /* Lo mantiene pegado al final */
 }
 
-/* Contenedor del footer */
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Secciones del footer */
-.footer-section {
-    flex: 1;
-    min-width: 200px;
-    text-align: center;
-}
-
-/* Ajuste del texto del footer */
-.footer-section p, .footer-section ul {
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-/* Enlaces */
-.footer-section a {
-    color: #ffcc00;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-.footer-section a:hover {
-    color: #ffd633;
-}
-
-/* Íconos de redes sociales */
-.social-icon img {
-    width: 30px;
-    margin: 5px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.social-icon img:hover {
-    transform: scale(1.1);
-}
-
-/* Copyright */
-.footer-copy {
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* ----- RESPONSIVE ----- */
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .image-item {
-        width: 90%;
-    }
-
-    .animal {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .animal img {
-        width: 80%;
-    }
-}
-
-
-/* Ocultar todas las secciones de animales por defecto */
+/* ----- OCULTAR TODAS LAS SECCIONES DE ANIMALES POR DEFECTO ----- */
 .animal {
     display: none;
 }
 
-/* Mostrar la sección que coincida con el #id en la URL */
+/* ----- MOSTRAR LA SECCIÓN QUE COINCIDA CON EL #ID EN LA URL ----- */
 .animal:target {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-    padding: 20px;
-    background: #f0f8ff; /* Fondo claro para diferenciar */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex; /* Muestra la sección */
+    flex-wrap: wrap; /* Permite varias líneas */
+    justify-content: center; /* Centra elementos */
+    gap: 20px; /* Espaciado */
+    width: 100%; /* Ancho completo */
+    max-width: 1200px; /* Máximo ancho */
+    margin-top: 20px; /* Espaciado superior */
+    padding: 20px; /* Espaciado interno */
+    background: #f0f8ff; /* Fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
-/* Mejorar la apariencia de las imágenes dentro de la galería */
-.animal:target img {
-    width: 30%;
-    max-width: 250px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-    cursor: pointer;
-}
-
-.animal:target img:hover {
-    transform: scale(1.05);
-}
-
-
-/* Contenedor de las imágenes */
-.imagenes-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacio entre imágenes */
-    flex-wrap: wrap; /* Permitir que se acomoden en pantallas pequeñas */
-    width: 100%;
-    max-width: 800px;
-}
-
-/* Ajuste del botón para que quede abajo */
-.boton-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 20px; /* Espacio entre las imágenes y el botón */
-}
-
-/* Estilo del botón "Volver" */
-.back {
-    display: inline-block;
-    background-color: #007BFF;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 25px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.back:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Tarjeta de cada imagen */
-.image-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Estilo general del botón */
+/* ----- ESTILO DEL BOTÓN "VOLVER" ----- */
 .volver-btn {
     display: inline-block;
     text-decoration: none;
@@ -327,12 +178,8 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: background 0.3s ease-in-out, transform 0.2s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    margin: 15px 0;
 }
 
-/* Efecto hover */
 .volver-btn:hover {
     background: linear-gradient(135deg, #0056b3, #003f80);
     transform: scale(1.1);
