@@ -1,3 +1,39 @@
+
+/* ----- Fondo de pantalla profesional ----- */
+.background {
+    position: fixed; /* Se queda fija detrás del contenido */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Coloca la imagen detrás de todos los elementos */
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir toda la pantalla sin deformarla */
+    opacity: 50%; /* Ajusta la opacidad para que el texto encima sea legible */
+    filter: brightness(80%); /* Opcional: Reduce el brillo para mejor contraste */
+}
+
+.explorar {
+    text-align: center;
+    font-size: 42px; /* Tamaño grande y llamativo */
+    font-weight: bold;
+    color: #f2f2f2; /* Blanco suave para mejor contraste */
+    text-transform: uppercase; /* Hace que el texto esté en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras para más elegancia */
+    padding: 40px 20px;
+    background: linear-gradient(to right, #2c6e49, #6b8e23); /* Degradado verde selva */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra suave para darle profundidad */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Efecto de sombra en el texto */
+    display: inline-block; /* Para que el fondo se ajuste al texto */
+    padding: 15px 40px; /* Ajusta el tamaño del fondo */
+}
+
+
 /* Asegurar que el body y html ocupen toda la pantalla */
 html, body {
     height: 100%;

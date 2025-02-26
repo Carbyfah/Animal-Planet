@@ -1,132 +1,65 @@
-/* Estilos generales del footer */
+/* Footer manteniendo estilo */
+
 .footer {
-    background: linear-gradient(to right, #2f5233, #2c6e49);
-    color: white;
-    padding: 15px 5%; /* Ajustar padding para un diseño más compacto */
-    text-align: center;
-    width: 100vw; /* Asegurar que ocupa toda la pantalla horizontalmente */
-    box-sizing: border-box;
-    min-height: 70px; /* Mantener altura uniforme */
-    position: relative; /* Mantenerlo al final sin flotante */
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    opacity: 1; /* Eliminar transparencia */
+    background: #2c6e49; /* Fondo sólido verde oscuro */
+    color: white; /* Color blanco para texto */
+    padding: 10px 15px; /* Espaciado simple */
+    text-align: center; /* Texto centrado */
+    width: 100%; /* Ancho completo */
+    box-sizing: border-box; /* Padding incluido en tamaño */
+    position: relative; /* Posición relativa sencilla */
+    font-size: 12px; /* Tamaño pequeño de fuente */
 }
 
-/* Asegurar que el footer tenga un fondo sólido y cubra completamente */
-.footer::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100%;
-    background: linear-gradient(to right, #2f5233, #2c6e49);
-    opacity: 1; /* Fondo sólido sin transparencia */
-    z-index: -1;
-}
-
-/* Contenedor del footer */
+/* Contenedor del footer simple */
 .footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center; /* Alinear verticalmente el contenido */
-    gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex; /* Flexbox para organizar en horizontal */
+    justify-content: space-around; /* Espaciado uniforme entre secciones */
+    align-items: center; /* Centrado vertical */
+    max-width: 1200px; /* Ancho máximo para el contenido */
+    margin: 0 auto; /* Centrado automático horizontal */
 }
 
-/* Reducir el tamaño de los iconos de redes sociales */
-.social-icon img {
-    width: 30px; /* Tamaño más pequeño */
-}
-
-/* Secciones del footer */
+/* Secciones individuales del footer */
 .footer-section {
-    flex: 1;
-    min-width: 200px;
+    flex: 1; /* Flexibilidad en distribución */
+    padding: 5px; /* Padding reducido */
 }
 
-/* Ajustar solo el texto "Síguenos" sin mover los íconos */
-.footer-section.social h3 {
-    margin-bottom: 0;  /* Eliminar margen inferior */
-    padding-bottom: 5px; /* Mantener espacio bajo la línea */
-    position: relative;
-    top: -10px; /* Mover solo el texto hacia arriba */
+.footer-section h3 {
+    font-size: 14px; /* Tamaño pequeño del título */
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 5px; /* Espaciado inferior mínimo */
+    color: #c8e6c9; /* Color claro para contraste */
+    text-transform: uppercase; /* Texto en mayúsculas */
 }
 
-/* Estilos de párrafos y listas */
-.footer-section p, 
-.footer-section ul {
-    font-size: 14px; /* Reducir el tamaño de fuente */
-    margin: 5px 0; /* Reducir espacio entre elementos */
+.footer-section p {
+    font-size: 12px; /* Tamaño pequeño de párrafos */
+    color: #e0f2e9; /* Color claro suave */
 }
 
 .footer-section ul {
-    list-style: none;
+    list-style: none; /* Sin estilo de lista */
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+    margin: 3px 0; /* Espaciado mínimo entre enlaces */
 }
 
-/* Enlaces */
 .footer-section a {
-    color: #c8e6c9;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+    color: #f2b90c; /* Color amarillo para enlaces */
+    text-decoration: none; /* Sin subrayado */
 }
 
 .footer-section a:hover {
-    color: white;
-}
-
-/* Estilos de redes sociales */
-.footer-section.social {
-    text-align: center;
-}
-
-/* Asegurar que "Síguenos" quede arriba de los iconos */
-.footer-section.social h3 {
-    display: block;
-    margin-bottom: 10px;
-}
-
-/* Estilo para los iconos de redes sociales */
-.social-icon {
-    display: inline-block;
-    margin: 5px;
+    color: #ffdf6e; /* Color al pasar el cursor */
 }
 
 .social-icon img {
-    width: 35px;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 30%;
-}
-
-.social-icon img:hover {
-    transform: scale(1.1);
-}
-
-/* Texto de derechos de autor */
-.footer-copy {
-    margin-top: 20px;
-    font-size: 14px;
-    opacity: 1; /* Eliminar cualquier transparencia */
-}
-
-/* Asegurar que el body y el html ocupen toda la altura */
-html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Contenedor principal para que empuje el footer hacia abajo */
-.container {
-    flex: 1;
+    width: 20px; /* Tamaño reducido */
+    height: 20px;
+    border-radius: 50%; /* Forma circular simple */
 }

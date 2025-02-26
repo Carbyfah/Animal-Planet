@@ -1,15 +1,23 @@
+
 /* Estilos de la página Conócenos */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #eef7e1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 20px;
     margin: 0;
+
+    /* Mantener el footer correctamente alineado */
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+
+    /* Centrar contenido en el eje horizontal y vertical */
+    place-items: center;
 }
 
+/* Contenedor principal */
 .conocenos {
+    margin-top: 4%;
     text-align: center;
     background: #ffffff;
     padding: 40px;
@@ -17,8 +25,14 @@ body {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     width: 90%;
     max-width: 800px;
-    margin-top: 4%;
+    
+    /* Centrarlo en el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .conocenos h1 {
     font-size: 32px;
@@ -63,4 +77,21 @@ body {
 .team-member p {
     font-size: 16px;
     color: #333;
+}
+.carbajal {
+    width: 120px; /* Tamaño adecuado */
+    height: 120px;
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Ajustar imagen sin deformarla */
+    border: 4px solid #2d572c; /* Borde verde oscuro */
+    padding: 5px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover para resaltar la imagen */
+.carbajal:hover {
+    transform: scale(1.1); /* Aumentar ligeramente */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); /* Sombra más fuerte */
+    border-color: #1c3f1a; /* Borde más oscuro */
 }

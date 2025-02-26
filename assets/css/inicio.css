@@ -1,305 +1,315 @@
-/* ----- ESTILOS GENERALES ----- */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eef7e1;
-    color: #333;
-    display: grid;
-    flex-direction: column;
-    min-height: 100vh; /* Mínimo toda la altura de la pantalla */
-    grid-template-rows: auto 1fr auto;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #eef7e1;
-}
-
-/* Contenedor general para centrar contenido */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* ----- SECCIÓN HERO ----- */
-.hero {
-    background: url('../../assets/images/fondo-selva.jpg') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-
-.hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.btn {
-    display: inline-block;
-    background: #2c6e49;
-    color: white;
-    padding: 12px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background: #1c4a2c;
-}
-
-/* ----- SECCIÓN CATEGORÍAS DE ANIMALES ----- */
-.animal-categories {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.category-item {
-    position: relative;
-    width: 200px;
-    text-align: center;
-}
-
-.category-item img {
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* Efecto sutil de luz */
+    backdrop-filter: blur(3px); /* Efecto vidrio */
+    z-index: -1; /* Envía esta capa detrás de los demás elementos */
+}
+
+
+
+/* ----- SECCIÓN CATEGORÍAS DE ANIMALES----- */
+.animal-categories {
+    text-align: center; /* Centra el contenido de la sección */
+    padding: 60px 20px; /* Reduce el padding para hacer la sección más compacta */
+    background: #eef7e1; /* Fondo de color sólido */
+}
+
+/* Título de la sección */
+.animal-categories h2 {
+    font-size: 30px; /* Reduce el tamaño del título */
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    color: white;
+    background: #2c6e49; /* Fondo sólido en lugar de degradado */
+    display: inline-block; /* Ajusta el tamaño del fondo al texto */
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes menos redondeados */
+}
+
+/* Contenedor de la galería */
+.gallery {
+    display: flex; /* Distribuye los elementos en una fila */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: center; /* Centra los elementos */
+    gap: 15px; /* Reduce el espacio entre los elementos */
+    margin-top: 20px;
+}
+
+/* Tarjeta de cada categoría */
+.category-item {
+    position: relative; /* Permite agregar contenido superpuesto */
+    width: 200px; /* Tamaño más compacto */
+    text-align: center;
+    overflow: hidden; /* Evita que los elementos internos sobresalgan */
+    border-radius: 8px; /* Bordes menos redondeados */
+}
+
+/* Imagen de cada categoría */
+.category-item img {
+    width: 100%; /* Se ajusta al contenedor */
+    border-radius: 8px;
+}
+
+/* Fondo semi-transparente para el texto */
+.category-item span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 110, 73, 0.85); /* Color oscuro translúcido */
+    color: white;
+    font-size: 18px; /* Reduce el tamaño del texto */
+    font-weight: bold;
+    padding: 10px 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+
+
+/* ----- SECCIÓN NOTICIAS----- */
+.news, .noticias {
+    padding: 60px 20px; /* Reduce el padding para hacer la sección más compacta */
+    text-align: center; /* Centra el contenido */
+    background: #eef7e1; /* Color de fondo sólido */
+}
+
+/* Título de la sección */
+.news h2, .noticias h2 {
+    font-size: 30px; /* Reduce el tamaño del título */
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte el texto en mayúsculas */
+    color: white;
+    background: #2c6e49; /* Fondo sólido en lugar de degradado */
+    display: inline-block; /* Ajusta el fondo al contenido del título */
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes menos redondeados */
+}
+
+/* Contenedor flexible de noticias */
+.news-container, .noticia-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reduce el espacio entre las noticias */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias líneas */
+    margin-top: 20px;
+}
+
+/* Tarjeta de cada noticia */
+.news-item, .noticia {
+    width: 300px; /* Reduce ligeramente el ancho de las tarjetas */
+    background: white;
+    border-radius: 8px; /* Bordes menos redondeados */
+    overflow: hidden;
     transition: transform 0.3s ease-in-out;
 }
 
-.category-item:hover img {
-    transform: scale(1.1);
+/* Imagen de la noticia */
+.news-item img, .noticia img {
+    width: 100%; /* Ajusta la imagen al ancho de la tarjeta */
+    height: 180px; /* Reduce la altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
 }
 
-.category-item span {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #2c6e49;
+/* Efecto al pasar el mouse */
+.news-item:hover, .noticia:hover {
+    transform: translateY(-5px); /* Reduce la elevación en hover */
 }
 
-/* ----- SECCIÓN NOTICIAS ----- */
-.news, .noticias {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.news-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.news-item {
-    width: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-.news-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.news-item h3 {
-    padding: 15px;
-    font-size: 20px;
+/* Contenido de la noticia */
+.news-item h3, .noticia h3 {
+    padding: 10px;
+    font-size: 18px; /* Reduce el tamaño del título dentro de la tarjeta */
     color: #1c4a2c;
+    font-weight: bold;
 }
 
-.news-item p {
-    padding: 0 15px 15px;
-    font-size: 16px;
+.news-item p, .noticia p {
+    padding: 0 10px 15px;
+    font-size: 14px; /* Reduce el tamaño del texto */
+    color: #333;
+    line-height: 1.4;
 }
 
-/* ----- SECCIÓN ANIMALES EN PELIGRO ----- */
+/* Botón de leer más */
+.news-item a, .noticia a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px; /* Reduce el tamaño del botón */
+    font-weight: bold;
+    color: white;
+    background: #2c6e49;
+    text-decoration: none;
+    border-radius: 0 0 8px 8px; /* Bordes menos redondeados */
+}
+
+.news-item a:hover, .noticia a:hover {
+    background: #1e472e; /* Color más oscuro en hover */
+}
+
+
+
+/* ----- SECCIÓN ANIMALES EN PELIGRO DE EXTINCIÓN ----- */
 .peligro-extincion {
-    padding: 50px 20px;
-    background: #f8f8f8;
+    padding: 60px 20px; /* Reduce el padding para hacer la sección más compacta */
+    background: #f8f8f8; /* Usa un fondo sólido en lugar de degradado */
     text-align: center;
 }
 
+/* Título de la sección */
+.peligro-extincion h2 {
+    font-size: 30px; /* Reduce el tamaño del título */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: #b71c1c; /* Usa un color sólido en lugar de degradado */
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px; /* Bordes menos redondeados */
+}
+
+/* Contenedor de los animales en peligro */
 .animales-lista {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px; /* Reduce el espacio entre los elementos */
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
+/* Tarjeta de cada animal */
 .animal-item {
-    width: 300px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Reduce ligeramente el ancho de las tarjetas */
+    background: #fff;
+    border-radius: 8px; /* Bordes menos redondeados */
     text-align: center;
-    padding: 20px;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
+/* Imagen del animal */
 .animal-item img {
     width: 100%;
-    border-radius: 10px;
+    height: 200px; /* Reduce la altura de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+    border-radius: 8px;
 }
 
-/* ----- SECCIÓN DOCUMENTALES ----- */
-.documentales {
-    padding: 50px 20px;
-    text-align: center;
+/* Efecto al pasar el mouse */
+.animal-item:hover {
+    transform: translateY(-5px); /* Reduce el efecto de elevación en hover */
 }
 
-.documental {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+/* Nombre del animal */
+.animal-item h3 {
+    font-size: 18px; /* Reduce el tamaño del título dentro de la tarjeta */
+    font-weight: bold;
+    color: #b71c1c;
+    margin-top: 10px;
 }
 
-.documental iframe {
-    width: 100%;
-    height: 300px;
-    border-radius: 10px;
+/* Descripción del estado del animal */
+.animal-item p {
+    font-size: 14px; /* Reduce el tamaño del texto */
+    color: #333;
+    margin-top: 8px;
+    padding: 0 10px;
+    line-height: 1.4;
 }
 
-/* ----- SECCIÓN GALERÍA ----- */
-.galeria {
-    text-align: center;
-    padding: 50px 20px;
-    background: #f8f8f8;
-}
-
-.imagenes {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.imagenes img {
-    width: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
-}
-
-.imagenes img:hover {
-    transform: scale(1.1);
-}
-
-/* ----- SECCIÓN ZONA PARA NIÑOS ----- */
-.zona-ninos {
-    padding: 50px 20px;
-    text-align: center;
-    background: white;
-}
-
-.zona-ninos p {
-    font-size: 18px;
-}
-
-/* ----- SECCIÓN VOLUNTARIADO ----- */
-.voluntariado {
-    padding: 50px 20px;
-    background: #e6f5d0;
-    text-align: center;
-}
-
-/* ----- SECCIÓN MAPA DE VIDA SILVESTRE ----- */
-.mapa {
-    padding: 50px 20px;
-    text-align: center;
-    background: white;
-}
-
-.mapa iframe {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
-    border-radius: 10px;
-}
-
-/* ----- SECCIÓN TIENDA ----- */
-.tienda {
-    text-align: center;
-    padding: 50px 20px;
-    background: #f5f5f5;
-}
-
-/* ----- FOOTER ----- */
-.footer {
-    background: #2c6e49;
+/* Botón de información */
+.animal-item a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px; /* Reduce el tamaño del botón */
+    font-weight: bold;
     color: white;
-    text-align: center;
-    padding: 30px 10px;
-    width: 100%;
-    position: relative; /* Se mantiene como parte normal del flujo */
-    bottom: 0;
-    left: 0;
-    margin-top: auto; /* Esto hace que solo aparezca hasta el final */
+    background: #b71c1c;
+    text-decoration: none;
+    border-radius: 5px; /* Bordes menos redondeados */
+    transition: background 0.3s ease-in-out;
+}
+
+.animal-item a:hover {
+    background: #880e4f; /* Color más oscuro en hover */
 }
 
 
-.footer-container {
+
+/* ----- SECCIÓN DOCUMENTALES MEJORADA ----- */
+.documentales {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #e0f7fa, #b2dfdb); /* Fondo más vibrante */
+    position: relative;
+}
+
+/* Efecto de superposición para hacerlo más bonito */
+.documentales::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+/* Título de la sección */
+.documentales h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(to right, #004d40, #00796b);
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+}
+
+/* Contenedor de los documentales */
+.documental-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 40px; /* Más espacio entre documentales */
+    margin-top: 40px;
 }
 
-.footer-section {
-    width: 250px;
+/* Tarjeta de cada documental */
+.documental {
+    width: 90%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    margin-left: 27%;
+    margin-top: 3%;
 }
 
-.footer-section h3 {
-    font-size: 20px;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin: 5px 0;
-}
-
-.footer-section a {
-    color: #c8e6c9;
-    text-decoration: none;
-}
-
-.footer-section a:hover {
-    color: white;
-}
-
-.footer-copy {
+/* Título del documental */
+.documental h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #004d40;
     margin-top: 20px;
-    font-size: 14px;
-    opacity: 0.8;
 }
+
+

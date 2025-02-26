@@ -1,100 +1,81 @@
 /* Estilos generales del navbar */
+
 .navbar {
-  background: linear-gradient(to right, #2c6e49, #2f5233);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%; /* Ocupar todo el ancho */
-  height: 70px; /* Altura fija */
-  padding: 0 5%; /* Espaciado interno a los lados */
-  box-sizing: border-box; /* Evita que el padding aumente el tamaño */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: fixed; /* Mantenerlo fijo en la parte superior */
-  top: 0; /* Asegura que quede en la parte superior */
-  left: 0;
-  z-index: 1000; /* Mantenerlo sobre otros elementos */
+  background: #2c6e49; /* Fondo sólido verde*/
+  display: flex; /* Organiza horizontalmente los elementos internos */
+  align-items: center; /* Centra verticalmente los elementos internos */
+  width: 100%; /* Ancho completo del navbar */
+  height: 60px; /* Altura fija más básica */
+  padding: 0 20px; /* Espacio interno a los lados reducido*/
+  position: fixed; /* Navbar permanece fijo arriba al hacer scroll */
+  top: 0; /* Pegado arriba */
+  left: 0; /* Pegado a la izquierda */
+  z-index: 1000; /* Se mantiene sobre otros elementos */
+}
+
+.navbar .login{
+  margin-left: 700px; /*Corremos Login a la izquierda*/
 }
 
 .navbar .logo {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
+  display: flex; /* Alinea horizontalmente el logo e imagen */
+  align-items: center; /* Centra verticalmente logo e imagen */
+  font-size: 20px; /* Texto ligeramente más pequeño */
+  font-weight: bold; /* Texto en negrita */
+  color: white; /* Color blanco para texto del logo */
+  text-decoration: none; /* Elimina subrayado del enlace */
 }
 
 .navbar .logo img {
-  width: 50px;
-  margin-right: 10px;
-  border-radius: 100%;
+  width: 40px; /* Logo un poco más pequeño */
+  margin-right: 8px; /* Menos espacio al lado del logo */
+  border-radius: 50%; /* Logo circular */
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style: none; /* Quita puntos de lista */
+  display: flex; /* Coloca enlaces horizontalmente */
+  gap: 15px; /* Reduce espacio entre enlaces */
 }
 
 .nav-links li {
-  position: relative;
+  position: relative; /* Para posicionar elementos internos correctamente */
 }
 
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  padding: 10px;
-  transition: color 0.3s ease-in-out;
+  text-decoration: none; /* Elimina subrayado */
+  color: white; /* Color blanco en enlaces */
+  font-size: 16px; /* Letra más pequeña y básica */
+  padding: 8px; /* Espaciado cómodo alrededor del enlace */
 }
 
 .nav-links a:hover {
-  color: #c8e6c9;
+  color: #a8d5b0; /* Color más claro al pasar el mouse */
 }
 
-/* Estilo del dropdown */
+/* Dropdown para el menu de arriba*/
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  list-style: none;
-  padding: 10px 0;
-  display: none;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  min-width: 150px; /* Ajusta el ancho mínimo */
+  position: absolute; /* Posición relativa al padre */
+  top: 100%; /* Colocado justo debajo del enlace principal */
+  left: 0; /* Alineado a la izquierda */
+  background: white; /* Fondo sencillo blanco */
+  list-style: none; /* Sin puntos de lista */
+  padding: 8px 0; /* Menos padding interno */
+  display: none; /* Oculto inicialmente */
+  border-radius: 3px; /* Esquinas suavemente redondeadas */
+  min-width: 150px; /* Ancho mínimo para que los enlaces sean visibles */
 }
 
 .dropdown-menu li {
-  padding: 8px 20px;
+  padding: 6px 12px; /* Espaciado interno más pequeño */
 }
 
 .dropdown-menu a {
-  color: #2c6e49;
-  display: block; /* Hace que el área clickeable sea más grande */
-  padding: 8px 15px;
+  color: #2c6e49; /* Texto verde oscuro */
+  display: block; /* Hace el enlace clickeable en toda el área */
+  padding: 6px 10px; /* Espaciado interno básico */
 }
 
 .dropdown-menu a:hover {
-  background-color: #c8e6c9;
-}
-
-/* Solución al problema de desaparición rápida */
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-  display: block;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-      display: block;
-      text-align: center;
-  }
-
-  .dropdown-menu {
-      position: static;
-      box-shadow: none;
-  }
+  background-color: #e0f0e0; /* Fondo suave al pasar el cursor */
 }

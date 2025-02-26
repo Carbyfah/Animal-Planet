@@ -1,14 +1,4 @@
-/* Estilos de la página Historia */
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #eef7e1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    margin: 0;
-}
-
+/* ----- SECCIÓN HISTORIA ----- */
 .historia {
     text-align: center;
     background: #ffffff;
@@ -18,12 +8,21 @@ body {
     width: 90%;
     max-width: 800px;
     margin-top: 4%;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-left: 20%;
+}
+
+/* Efecto hover */
+.historia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .historia h1 {
-    font-size: 32px;
+    font-size: 34px;
     color: #2d572c;
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
 
 .historia p {
@@ -32,6 +31,7 @@ body {
     line-height: 1.8;
 }
 
+/* ----- SECCIÓN LÍNEA DE TIEMPO ----- */
 .timeline {
     display: flex;
     flex-direction: column;
@@ -48,6 +48,12 @@ body {
     width: 80%;
     max-width: 600px;
     text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover en línea de tiempo */
+.timeline-item:hover {
+    transform: scale(1.05);
 }
 
 .timeline-item h2 {
@@ -61,13 +67,53 @@ body {
     color: #333;
 }
 
-.main-content{
-    height: 100%;
-    margin: 0;
+/* ----- SECCIÓN MISIÓN Y VISIÓN ----- */
+.mision-vision {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
-    justify-content: center; /* Centrar verticalmente si el contenido es corto */
-    background-color: #eef7e1;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.mision, .vision {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 45%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.mision:hover, .vision:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.mision h2, .vision h2 {
+    font-size: 26px;
+    color: #2d572c;
+    margin-bottom: 10px;
+}
+
+.mision p, .vision p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 768px) {
+    .mision-vision {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mision, .vision {
+        width: 90%;
+    }
 }
 
